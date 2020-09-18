@@ -3,8 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { AppLoading } from 'expo';
 import { useFonts, Play_400Regular, Play_700Bold } from '@expo-google-fonts/play';
-import Header from './src/components/Header';
-import Home from './src/pages/Home';
+import Routes from './src/routes';
 
 
 export default function App() {
@@ -17,11 +16,9 @@ export default function App() {
     return <AppLoading />;
   }
 
-
   return (
     <View style={styles.container}>
-      <Header />
-      <Home />
+      <Routes />
       <StatusBar style="light" />
     </View>
   );
@@ -30,6 +27,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0B1F34',
   }  
 });
