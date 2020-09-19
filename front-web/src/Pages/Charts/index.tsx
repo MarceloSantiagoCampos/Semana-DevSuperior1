@@ -21,12 +21,13 @@ const initialPieData = {
     series: []
 }
 
-const BASE_URL = 'http://localhost:8080'
+const BASE_URL = 'https://devsuperior.herokuapp.com';
+
 
 const Charts = () => {
     const[barChartData, setBarChartData] = useState<BarChartData[]>([]);
-    const[platformData, setPlatformData] = useState<PieChartData[]>(initialPieData);
-    const[genderData, setGenderData] = useState<PieChartData[]>(initialPieData);
+    const[platformData, setPlatformData] = useState<PieChartData>(initialPieData);
+    const[genderData, setGenderData] = useState<PieChartData>(initialPieData);
 
     useEffect(() => {               //useEffect(() => {}, [vazio]), uma vez que esta vazio o ultimo []
         async function getData() {
